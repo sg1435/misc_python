@@ -1,0 +1,13 @@
+if __name__ == '__main__':
+    s = input()
+    s = list(s)
+    serhat = any([i.isalnum() for i in s])
+    print(serhat)
+    serhat = any([i.isalpha() for i in s])
+    print(serhat)
+    serhat = any([i.isdigit() for i in s])
+    print(serhat)
+    serhat = any([i.islower() for i in s])
+    print(serhat)
+    serhat = any([i.isupper() for i in s])
+    print(serhat)
