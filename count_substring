@@ -1,0 +1,27 @@
+def count_substring(w1, w2):
+    w1 = list(w1)
+    i = 0
+    b = []
+    while i < len(w1) - 2:
+        a = [w1[i] for i in range(i,i+3)]
+        b.append(a)
+        i = i + 1
+        
+    c = [''.join(i) for i in b]
+    i = 0
+    count = 0
+    while i < len(c):
+        if c[i] == w2:
+            count = count + 1
+            i = i + 1
+        else:
+            i = i + 1
+
+    return count
+
+if __name__ == '__main__':
+    string = input().strip()
+    sub_string = input().strip()
+    
+    count = count_substring(string, sub_string)
+    print(count)
